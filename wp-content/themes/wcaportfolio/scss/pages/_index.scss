@@ -1,0 +1,187 @@
+@use "../globals/margin";
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+///Import components
+//Navbar
+@forward "../components/navbar";
+//CardSkill
+@forward "../components/cardSkill";
+//CardProject
+@forward "../components/cardProject";
+//Footer
+@forward "../components/footer";
+
+.hero {
+  width: 100vw;
+
+  &__container {
+    width: 1095px;
+    display: flex;
+    align-items: center;
+    padding: calc(169px - 80px) 172px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 90vw;
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: calc(169px - 80px) 15px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+      width: 90vw;
+      padding: calc(169px - 80px) 20px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: calc(169px - 80px) 80px;
+    }
+  }
+
+  &__textbox {
+    width: 100vw;
+    padding: 18px 0;
+  }
+
+  &__textbox__h1 {
+    font-family: map-get($fonts, "Montserrat");
+    color: map-get($colors, "TextColor");
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 57.2px;
+    width: 95%;
+  }
+
+  &__textbox__paragraph {
+    font-family: map-get($fonts, "ZillaSlab");
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 18px;
+    font-size: 16px;
+    color: map-get($colors, "TextColor");
+  }
+
+  &__textbox__button {
+    width: 161px;
+    height: 24px;
+    margin-top: 32px;
+    padding: 10px 20px;
+    font-family: map-get($fonts, "ZillaSlab");
+    border: 1px solid #21243d;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: map-get($colors, "TextColor");
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__textbox__button a {
+    text-decoration: none;
+    color: map-get($colors, "TextColor");
+  }
+
+  &__textbox__button:hover {
+    border: 1px solid transparent;
+    background-color: map-get($colors, "Coral");
+    color: #ffffff;
+  }
+
+  &__imgbox {
+    width: 425.72px;
+    height: 290px;
+    margin-left: 130px;
+    background-color: transparent;
+
+    @media (max-width: 768px) {
+      width: 100vw;
+      margin-left: 0;
+    }
+  }
+
+  &__imgbox__img {
+    width: 425.72px;
+    object-fit: cover;
+    box-shadow: 10px 10px 0px #ebebeb;
+
+    @media (max-width: 768px) {
+      width: 349px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Skills
+
+.skills {
+  background-color: #121212;
+  padding-bottom: 60px;
+  height: 458px;
+  width: 100vw;
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    width: 100vw;
+  }
+
+  &__h3 {
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    padding: 44px 0px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 10%;
+
+    @media (min-width: 1024px) and (max-width: 1346px) {
+      width: 100vw;
+      padding: 20px 0px;
+      flex-wrap: nowrap;
+      height: auto;
+    }
+
+    @media (max-width: 1023px) {
+      gap: 20px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+//Featured Works
+
+.fworks {
+  width: 100vw;
+  margin: 0 auto;
+  margin-top: 80px;
+  height: auto;
+
+  &__title {
+    color: map-get($colors, "DarkColor");
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 22px;
+    max-width: 874px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 100vw;
+      text-align: center;
+    }
+  }
+}

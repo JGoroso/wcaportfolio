@@ -1,0 +1,80 @@
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+.projectscard {
+  max-width: 874px;
+  height: 206px;
+  margin: 32 auto;
+  padding: 11px 0px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 246px;
+    height: auto;
+
+    @media (max-width: 768px) {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  &__info {
+    width: 90vw;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-size: 28px;
+    color: map-get($colors, "DarkColor");
+    font-weight: 700;
+  }
+
+  &__secondaryinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__secondaryinfo__yearpill {
+    background-color: map-get($colors, "Blue");
+    color: #ffffff;
+    border-radius: 50px;
+    width: 67px;
+    font-size: 18px;
+    font-family: "Heebo";
+    text-align: center;
+  }
+
+  &__secondaryinfo__category {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 27px;
+    color: map-get($colors, "Grey");
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    color: map-get($colors, "TextColor");
+    font-family: "Zilla Slab";
+    font-weight: 400;
+    padding-top: 24px;
+    max-width: 874px;
+  }
+}

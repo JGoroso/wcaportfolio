@@ -1,0 +1,133 @@
+@use "../globals/margin";
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+///Import components
+//Navbar
+@forward "../components/navbar";
+//Footer
+@forward "../components/footer";
+
+.single {
+  width: 874px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    padding: 0 10px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+
+    &__categorie {
+      font-family: map-get($fonts, "ZillaSlab");
+      color: map-get($colors, "TextColor");
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 21px;
+      text-decoration: none;
+    }
+
+    &__works {
+      font-family: map-get($fonts, "ZillaSlab");
+      color: map-get($colors, "TextColor");
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-family: map-get($fonts, "Montserrat");
+    font-size: 34px;
+    color: map-get($colors, "TextColor");
+    padding-top: 15px;
+  }
+
+  &__info {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    &__yearpill {
+      background-color: map-get($colors, "Blue");
+      color: #ffffff;
+      border-radius: 50px;
+      width: 67px;
+      font-size: 18px;
+      font-family: "Heebo";
+      text-align: center;
+    }
+
+    &__category {
+      font-size: 18px;
+      font-family: "Montserrat";
+      font-weight: 400;
+      line-height: 27px;
+      color: map-get($colors, "Grey");
+    }
+  }
+
+  &__paragraph {
+    padding-top: 24px;
+    font-size: 16px;
+    font-family: map-get($fonts, "ZillaSlab");
+    color: map-get($colors, "TextColor");
+  }
+
+  &__dashboardImg {
+    margin-top: 60px;
+  }
+
+  &__dashboardImg img {
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__h2 {
+    font-family: "Montserrat";
+    margin-top: 40px;
+    color: map-get($colors, "TextColor");
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  &__h3 {
+    font-family: "Montserrat";
+    margin-top: 16px;
+    color: map-get($colors, "TextColor");
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__carImg {
+    margin-top: 32px;
+  }
+
+  &__carImg img {
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__checkImg {
+    margin-top: 32px;
+  }
+
+  &__checkImg img {
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

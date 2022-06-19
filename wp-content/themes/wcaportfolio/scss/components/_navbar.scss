@@ -1,0 +1,62 @@
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 40px;
+
+  @media (max-width: 768px) {
+    padding: 13px 16px;
+  }
+
+  &__logo a {
+    text-decoration: none;
+  }
+
+  &__logo__textblack {
+    font-family: map-get($fonts, "Montserrat");
+    font-weight: 900;
+    color: map-get($colors, "TextColor");
+    font-size: 22px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__logo__textlight {
+    font-family: map-get($fonts, "Montserrat");
+    font-weight: 300;
+  }
+
+  &__logo__point {
+    color: map-get($colors, "Coral");
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  .menu-item a {
+    color: map-get($colors, "TextColor");
+    text-decoration: none;
+    font-family: map-get($fonts, "ZillaSlab");
+    font-weight: 500;
+    padding-right: 20px;
+  }
+
+  .menu-item a:hover {
+    color: map-get($colors, "Coral");
+  }
+}

@@ -1,0 +1,31 @@
+@use "../globals/margin";
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+///Import components
+//Navbar
+@forward "../components/navbar";
+//Footer
+@forward "../components/footer";
+//CardProject
+@forward "../components/cardProject";
+
+.works {
+  width: 874px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    padding: 0 10px;
+  }
+
+  &__title {
+    font-family: map-get($fonts, "Montserrat");
+    font-size: 44px;
+    color: map-get($colors, "TextColor");
+
+    @media (max-width: 768px) {
+      margin: 24px 16px 60px 16px;
+    }
+  }
+}

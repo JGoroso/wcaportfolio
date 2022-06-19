@@ -1,0 +1,36 @@
+@use "../globals/colors" as *;
+@use "../globals/fonts" as *;
+
+//Footer
+
+.footer {
+  width: 100vw;
+  margin-top: 80px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 51px 0px;
+  }
+
+  &__socialmedia {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__email {
+    margin-top: 26px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    font-family: "Montserrat";
+  }
+
+  &__email a {
+    text-decoration: none;
+    color: map-get($colors, "TextColor");
+  }
+}

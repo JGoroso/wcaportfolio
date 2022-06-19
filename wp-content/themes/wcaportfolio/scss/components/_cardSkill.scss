@@ -1,0 +1,75 @@
+@use "../globals/fonts" as *;
+@use "../globals/colors" as *;
+
+.cardSkill {
+  width: 335px;
+  height: 295px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding-left: 20px;
+
+  &__title {
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: map-get($colors, "DarkColor");
+    padding: 15px 24px;
+  }
+
+  &__skillFrame {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 0.2fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 12px 24px;
+  }
+}
+
+.skillFrame {
+  &__img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__name {
+    font-family: "Zilla Slab";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: map-get($colors, "TextColor");
+  }
+
+  &__dots {
+    height: 14px;
+  }
+
+  &__dots--active {
+    background-color: map-get($colors, "Blue");
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &__dots--desactive {
+    background-color: map-get($colors, "Blue");
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.25;
+  }
+
+  &__languages {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 0.2fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 10px 24px;
+  }
+}
