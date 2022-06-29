@@ -331,6 +331,15 @@
   font-size: 28px;
   color: #21243D;
   font-weight: 700;
+  text-decoration: none;
+}
+.projectscard__title a {
+  text-decoration: none;
+  color: #21243D;
+}
+.projectscard__link a {
+  text-decoration: none;
+  font-size: 50;
 }
 .projectscard__secondaryinfo {
   display: flex;
@@ -552,7 +561,7 @@
 }
 
 .single {
-  width: 874px;
+  width: 100vw;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -561,13 +570,18 @@
     padding: 0 10px;
   }
 }
-.single__section {
+.single .section {
+  width: 874px;
   display: flex;
-  flex-direction: row;
-  gap: 14px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.single .section__tags {
+  display: flex;
+  gap: 10px;
   align-items: center;
 }
-.single__section__categorie {
+.single .section__tags__categorie {
   font-family: "Zilla Slab";
   color: #21243D;
   font-size: 14px;
@@ -575,7 +589,7 @@
   line-height: 21px;
   text-decoration: none;
 }
-.single__section__works {
+.single .section__tags__works {
   font-family: "Zilla Slab";
   color: #21243D;
   font-size: 14px;
@@ -583,20 +597,20 @@
   line-height: 21px;
   text-decoration: none;
 }
-.single__title {
+.single .section__title {
   font-family: Montserrat;
   font-size: 34px;
   color: #21243D;
   padding-top: 15px;
 }
-.single__info {
+.single .section__info {
   padding-top: 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 }
-.single__info__yearpill {
+.single .section__info__yearpill {
   background-color: #142850;
   color: #ffffff;
   border-radius: 50px;
@@ -605,56 +619,56 @@
   font-family: "Heebo";
   text-align: center;
 }
-.single__info__category {
+.single .section__info__category {
   font-size: 18px;
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 27px;
   color: #8695A4;
 }
-.single__paragraph {
+.single .section__paragraph {
   padding-top: 24px;
   font-size: 16px;
   font-family: "Zilla Slab";
   color: #21243D;
 }
-.single__dashboardImg {
+.single .section__dashboardImg {
   margin-top: 60px;
 }
 @media (max-width: 768px) {
-  .single__dashboardImg img {
+  .single .section__dashboardImg img {
     width: 100%;
     height: auto;
   }
 }
-.single__h2 {
+.single .section__h2 {
   font-family: "Montserrat";
   margin-top: 40px;
   color: #21243D;
   font-size: 34px;
   font-weight: 700;
 }
-.single__h3 {
+.single .section__h3 {
   font-family: "Montserrat";
   margin-top: 16px;
   color: #21243D;
   font-size: 30px;
   font-weight: 700;
 }
-.single__carImg {
+.single .section__carImg {
   margin-top: 32px;
 }
 @media (max-width: 768px) {
-  .single__carImg img {
+  .single .section__carImg img {
     width: 100%;
     height: auto;
   }
 }
-.single__checkImg {
+.single .section__checkImg {
   margin-top: 32px;
 }
 @media (max-width: 768px) {
-  .single__checkImg img {
+  .single .section__checkImg img {
     width: 100%;
     height: auto;
   }

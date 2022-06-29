@@ -15,7 +15,7 @@
 
 
   <?
-  get_template_part('modules/index/module', 'works')
+  get_template_part('modules/works/module', 'works')
   ?>
 
   <?php get_footer(); ?>

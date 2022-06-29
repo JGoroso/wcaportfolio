@@ -6,7 +6,9 @@
     <img class="projectscard__img" src="https://wcaportfolio.local/wp-content/themes/wcaportfolio/assets/projects/dashboard.png" alt="">
     <div class="projectscard__info">
       <div class="projectscard__title">
-        <h4>Designing Dashboards</h4>
+        <a href="single">
+          <h4>Designing Dashboards</h4>
+        </a>
       </div>
       <div class="projectscard__secondaryinfo">
         <div class="projectscard__secondaryinfo__yearpill">2020</div>
