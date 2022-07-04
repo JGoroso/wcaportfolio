@@ -101,12 +101,12 @@
     margin-top: 24px;
   }
 }
-.about__title {
+.about h1 {
   font-family: Montserrat;
   font-size: 44px;
   color: #21243D;
 }
-.about__paragraph {
+.about p {
   padding-top: 32px;
   font-family: "Zilla Slab";
   color: #21243D;
@@ -124,6 +124,13 @@
     width: 90vw;
     padding: 0 16px;
   }
+}
+.experience p {
+  padding-top: 15px;
+  font-family: "Zilla Slab";
+  color: #21243D;
+  font-weight: 400;
+  font-size: 16px;
 }
 .experience__title {
   color: #FF6464;
@@ -162,13 +169,6 @@
     font-size: 16px;
   }
 }
-.experience .expblock__detail {
-  font-family: "Zilla Slab";
-  color: #21243D;
-  font-size: 16px;
-  font-weight: 400;
-  padding-top: 15px;
-}
 
 .education {
   width: 874px;
@@ -180,6 +180,13 @@
     width: 90vw;
     padding: 0 16px;
   }
+}
+.education p {
+  padding-top: 15px;
+  font-family: "Zilla Slab";
+  color: #21243D;
+  font-weight: 400;
+  font-size: 16px;
 }
 .education__title {
   color: #FF6464;
@@ -218,16 +225,9 @@
     font-size: 16px;
   }
 }
-.education .edublock__detail {
-  font-family: "Zilla Slab";
-  color: #21243D;
-  font-size: 16px;
-  font-weight: 400;
-  padding-top: 15px;
-}
 
 .cardSkill {
-  width: 335px;
+  width: 425px;
   height: 295px;
   border-radius: 4px;
   background-color: #ffffff;
@@ -298,6 +298,18 @@
   border-bottom: 1px solid #e0e0e0;
   display: flex;
 }
+.projectscard img {
+  width: 100%;
+  max-width: 246px;
+  height: auto;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .projectscard img {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 768px) {
   .projectscard {
     max-width: 90vw;
@@ -307,24 +319,12 @@
     height: auto;
   }
 }
-.projectscard__img {
-  width: 100%;
-  max-width: 246px;
-  height: auto;
-}
-@media (max-width: 768px) {
-  .projectscard__img {
-    max-width: 360px;
-    margin: 0 auto;
-  }
-}
 .projectscard__info {
   width: 90vw;
   padding: 0 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px;
 }
 .projectscard__title {
   font-family: "Montserrat";
@@ -342,6 +342,7 @@
   font-size: 50;
 }
 .projectscard__secondaryinfo {
+  padding-top: 16px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -458,14 +459,15 @@
   }
 }
 .hero__imgbox__img {
-  width: 425.72px;
+  width: 100%;
   object-fit: cover;
   box-shadow: 10px 10px 0px #ebebeb;
 }
 @media (max-width: 768px) {
   .hero__imgbox__img {
-    width: 349px;
+    width: 100%;
     margin: 0 auto;
+    box-shadow: none;
   }
 }
 
@@ -492,14 +494,13 @@
   width: 100%;
   text-align: center;
   padding: 44px 0px;
+  display: inline-block;
 }
 .skills__container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 10%;
+  justify-content: center;
+  gap: 40px;
 }
 @media (min-width: 1024px) and (max-width: 1346px) {
   .skills__container {
@@ -566,8 +567,7 @@
 }
 @media (max-width: 768px) {
   .single {
-    width: 90vw;
-    padding: 0 10px;
+    width: 100vw;
   }
 }
 .single .section {
@@ -576,10 +576,21 @@
   flex-direction: column;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .single .section {
+    width: 90vw;
+  }
+}
 .single .section__tags {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .single .section__tags {
+    width: 90vw;
+    padding: 0 10px;
+  }
 }
 .single .section__tags__categorie {
   font-family: "Zilla Slab";
@@ -589,19 +600,13 @@
   line-height: 21px;
   text-decoration: none;
 }
-.single .section__tags__works {
+.single .section__tags__title {
   font-family: "Zilla Slab";
   color: #21243D;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   text-decoration: none;
-}
-.single .section__title {
-  font-family: Montserrat;
-  font-size: 34px;
-  color: #21243D;
-  padding-top: 15px;
 }
 .single .section__info {
   padding-top: 24px;
@@ -619,36 +624,54 @@
   font-family: "Heebo";
   text-align: center;
 }
-.single .section__info__category {
+.single .section__info__tags {
   font-size: 18px;
   font-family: "Montserrat";
   font-weight: 400;
   line-height: 27px;
   color: #8695A4;
 }
-.single .section__paragraph {
-  padding-top: 24px;
-  font-size: 16px;
-  font-family: "Zilla Slab";
-  color: #21243D;
-}
-.single .section__dashboardImg {
-  margin-top: 60px;
+.single .section .content {
+  width: 874px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .single .section__dashboardImg img {
-    width: 100%;
+  .single .section .content {
+    width: 90vw;
+  }
+}
+.single .section .content h1 {
+  font-family: Montserrat;
+  font-size: 34px;
+  color: #21243D;
+  padding-top: 15px;
+}
+.single .section .content p {
+  font-family: "Zilla Slab";
+  font-size: 16px;
+  color: #21243D;
+  padding-top: 24px;
+  line-height: 24px;
+}
+.single .section .content img {
+  margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .single .section .content img {
+    max-width: 90vw;
     height: auto;
   }
 }
-.single .section__h2 {
+.single .section .content h2 {
   font-family: "Montserrat";
   margin-top: 40px;
   color: #21243D;
   font-size: 34px;
   font-weight: 700;
 }
-.single .section__h3 {
+.single .section .content h3 {
   font-family: "Montserrat";
   margin-top: 16px;
   color: #21243D;

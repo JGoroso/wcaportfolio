@@ -7,6 +7,7 @@ $buttonTitle = get_field('button_title');
 $buttonFile = get_field('button_file');
 $image = get_field('image');
 
+
 ?>
 
 
@@ -34,10 +35,13 @@ $image = get_field('image');
 
     </div>
 
-    <div class=" hero__imgbox">
-      <?php if ($image) : ?>
-        <img class="hero__imgbox__img" src="<?php echo $image['url']; ?>" alt="" srcset="" width="426" height="290">
-      <?php endif; ?>
+    <div class="hero__imgbox">
+      <div class="hero__imgbox__img">
+        <?php if ($image) : ?>
+          <?php echo add_image_size('new-size', 425.72, 290, false); ?>
+          <?php echo wp_get_attachment_image($image, 'new-size'); ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 

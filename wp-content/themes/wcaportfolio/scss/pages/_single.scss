@@ -13,8 +13,7 @@
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 90vw;
-    padding: 0 10px;
+    width: 100vw;
   }
 
   .section {
@@ -23,10 +22,19 @@
     flex-direction: column;
     margin: 0 auto;
 
+    @media (max-width: 768px) {
+      width: 90vw;
+    }
+
     &__tags {
       display: flex;
       gap: 10px;
       align-items: center;
+
+      @media (max-width: 768px) {
+        width: 90vw;
+        padding: 0 10px;
+      }
 
       &__categorie {
         font-family: map-get($fonts, "ZillaSlab");
@@ -37,7 +45,7 @@
         text-decoration: none;
       }
 
-      &__works {
+      &__title {
         font-family: map-get($fonts, "ZillaSlab");
         color: map-get($colors, "TextColor");
         font-size: 14px;
@@ -45,13 +53,6 @@
         line-height: 21px;
         text-decoration: none;
       }
-    }
-
-    &__title {
-      font-family: map-get($fonts, "Montserrat");
-      font-size: 34px;
-      color: map-get($colors, "TextColor");
-      padding-top: 15px;
     }
 
     &__info {
@@ -71,7 +72,7 @@
         text-align: center;
       }
 
-      &__category {
+      &__tags {
         font-size: 18px;
         font-family: "Montserrat";
         font-weight: 400;
@@ -80,38 +81,55 @@
       }
     }
 
-    &__paragraph {
-      padding-top: 24px;
-      font-size: 16px;
-      font-family: map-get($fonts, "ZillaSlab");
-      color: map-get($colors, "TextColor");
-    }
+    // Content
 
-    &__dashboardImg {
-      margin-top: 60px;
-    }
+    .content {
+      width: 874px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
 
-    &__dashboardImg img {
       @media (max-width: 768px) {
-        width: 100%;
-        height: auto;
+        width: 90vw;
       }
-    }
 
-    &__h2 {
-      font-family: "Montserrat";
-      margin-top: 40px;
-      color: map-get($colors, "TextColor");
-      font-size: 34px;
-      font-weight: 700;
-    }
+      h1 {
+        font-family: map-get($fonts, "Montserrat");
+        font-size: 34px;
+        color: map-get($colors, "TextColor");
+        padding-top: 15px;
+      }
 
-    &__h3 {
-      font-family: "Montserrat";
-      margin-top: 16px;
-      color: map-get($colors, "TextColor");
-      font-size: 30px;
-      font-weight: 700;
+      p {
+        font-family: map-get($fonts, "ZillaSlab");
+        font-size: 16px;
+        color: map-get($colors, "TextColor");
+        padding-top: 24px;
+        line-height: 24px;
+      }
+
+      img {
+        margin-top: 24px;
+        @media (max-width: 768px) {
+          max-width: 90vw;
+          height: auto;
+        }
+      }
+      h2 {
+        font-family: "Montserrat";
+        margin-top: 40px;
+        color: map-get($colors, "TextColor");
+        font-size: 34px;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-family: "Montserrat";
+        margin-top: 16px;
+        color: map-get($colors, "TextColor");
+        font-size: 30px;
+        font-weight: 700;
+      }
     }
 
     &__carImg {

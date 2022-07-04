@@ -18,13 +18,13 @@
     margin-top: 24px;
   }
 
-  &__title {
+  h1 {
     font-family: map-get($fonts, "Montserrat");
     font-size: 44px;
     color: map-get($colors, "TextColor");
   }
 
-  &__paragraph {
+  p {
     padding-top: 32px;
     font-family: map-get($fonts, "ZillaSlab");
     color: map-get($colors, "TextColor");
@@ -41,6 +41,14 @@
   @media (max-width: 768px) {
     width: 90vw;
     padding: 0 16px;
+  }
+
+  p {
+    padding-top: 15px;
+    font-family: map-get($fonts, "ZillaSlab");
+    color: map-get($colors, "TextColor");
+    font-weight: 400;
+    font-size: 16px;
   }
 
   &__title {
@@ -80,14 +88,6 @@
         font-size: 16px;
       }
     }
-
-    &__detail {
-      font-family: map-get($fonts, "ZillaSlab");
-      color: map-get($colors, "TextColor");
-      font-size: 16px;
-      font-weight: 400;
-      padding-top: 15px;
-    }
   }
 }
 
@@ -99,6 +99,14 @@
   @media (max-width: 768px) {
     width: 90vw;
     padding: 0 16px;
+  }
+
+  p {
+    padding-top: 15px;
+    font-family: map-get($fonts, "ZillaSlab");
+    color: map-get($colors, "TextColor");
+    font-weight: 400;
+    font-size: 16px;
   }
 
   &__title {
@@ -137,14 +145,6 @@
       @media (max-width: 768px) {
         font-size: 16px;
       }
-    }
-
-    &__detail {
-      font-family: map-get($fonts, "ZillaSlab");
-      color: map-get($colors, "TextColor");
-      font-size: 16px;
-      font-weight: 400;
-      padding-top: 15px;
     }
   }
 }
